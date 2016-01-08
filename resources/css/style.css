@@ -287,7 +287,7 @@ body{
 		top: 0;
 		left: 0;
 		border: solid 1px #aaa;
-		background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+		background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;
 		border-radius: 5px;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
 	}
@@ -317,17 +317,17 @@ body{
 		margin: 0 0 5px;
 	}
 	.navigation ul:hover .current {
-		background: url(images/icon-check.png) no-repeat 10px 7px;
+		background: url(../images/icon-check.png) no-repeat 10px 7px;
 	}
 
 	/* right nav */
-	.nav.right ul {
+	.navigation.right ul {
 		left: auto;
 		right: 0;
 	}
 
 	/* center nav */
-	.nav.center ul {
+	.navigation.center ul {
 		left: 50%;
 		margin-left: -90px;
 	}
