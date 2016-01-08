@@ -276,11 +276,11 @@ body{
 
 /* navbar colapse */
 @media screen and (max-width: 600px) {
-	.navigation {
+	#header .navigation {
 		position: relative;
 		min-height: 40px;
 	}	
-	.navigation ul {
+	#header .navigation ul {
 		width: 180px;
 		padding: 5px 0;
 		position: absolute;
@@ -291,43 +291,43 @@ body{
 		border-radius: 5px;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
 	}
-	.navigation li {
+	#header .navigation li {
 		display: none; /* hide all <li> items */
 		margin: 0;
 	}
-	.navigation .current {
+	#header .navigation .current {
 		display: block; /* show only current <li> item */
 	}
-	.navigation a {
+	#header .navigation a {
 		display: block;
 		padding: 5px 5px 5px 32px;
 		text-align: left;
 	}
-	.navigation .current a {
+	#header .navigation .current a {
 		background: none;
 		color: #666;
 	}
 
 	/* on nav hover */
-	.navigation ul:hover {
+	#header .navigation ul:hover {
 		background-image: none;
 	}
-	.navigation ul:hover li {
+	#header .navigation ul:hover li {
 		display: block;
 		margin: 0 0 5px;
 	}
-	.navigation ul:hover .current {
+	#header .navigation ul:hover .current {
 		background: url(../images/icon-check.png) no-repeat 10px 7px;
 	}
 
 	/* right nav */
-	.navigation.right ul {
+	#header .navigation.right ul {
 		left: auto;
 		right: 0;
 	}
 
 	/* center nav */
-	.navigation.center ul {
+	#header .navigation.center ul {
 		left: 50%;
 		margin-left: -90px;
 	}
