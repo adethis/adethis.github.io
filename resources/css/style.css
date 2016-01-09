@@ -37,11 +37,6 @@ body{
     margin: 0 auto;
 }
 
-/* section configure */
-.section{
-    background:url("../images/banner_bg.jpg") repeat center center;
-}
-
 /* header configuration */
 #header{
     padding: 40px 0;    
