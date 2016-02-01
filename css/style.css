@@ -1,0 +1,162 @@
+@font-face{
+    font-family:"Web-Raleway";
+    src:url('../fonts/Raleway-Regular.eot');
+    src:url('../fonts/Raleway-Regular.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/Raleway-Regular.woff') format("woff"),
+    url('../fonts/Raleway-Regular.ttf') format("truetype"),
+    url('../fonts/Raleway-Regular.svg#web') format("svg");
+    font-style:normal;
+    font-weight:normal;
+}
+
+@font-face{
+    font-family:"Web-Raleway-Bold";
+    src:url('../fonts/Raleway-Bold.eot');
+    src:url('../fonts/Raleway-Bold.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/Raleway-Bold.woff') format("woff"),
+    url('../fonts/Raleway-Bold.ttf') format("truetype"),
+    url('../fonts/Raleway-Bold.svg#web') format("svg");
+    font-style:normal;
+    font-weight:normal;
+}
+
+body{
+    background-color: white;
+}
+#menu{
+    color: white;
+    font-family: Web-Raleway;
+}
+#menu a{
+    color: white;
+    padding-top: 30px;
+}
+#menu a:hover{
+    background-color: white;
+    color: #2e6fa7;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#banner h1{
+    font-family: Web-Raleway;
+}
+#banner p{
+    font-family: Web-Raleway;
+}
+#banner a{
+    font-family: Web-Raleway;
+}
+
+h1.text-inverse{
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#about-us{
+    padding: 25px 0;
+    font-family: Web-Raleway;
+}
+
+.clear{
+    float: none;
+    clear: both;
+}
+
+#about-us .title-content{
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Web-Raleway;
+}
+#portofolio .title-portofolio{
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Web-Raleway;
+}
+#about-us .title-content span{
+}
+.center{
+    width: 960px;
+    margin: 0 auto;
+}
+#services{
+    padding: 25px 0;
+    font-family: Web-Raleway;
+}
+#services .title-content{
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Web-Raleway;
+}
+#services .title-services{
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#about-us .title-content span{
+}
+
+ol, ul {
+    list-style: none;
+}
+
+#contact{
+    background: url("../img/bg-contact.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    padding: 25px 0;
+    margin-top: 30px;
+    font-family: Web-Raleway;
+}
+
+#contact form{
+    color: #FFFFFF;
+    font-family: Web-Raleway;
+}
+#contact h1{
+    color: #FFFFFF;
+    font-family: Web-Raleway;
+    text-transform: uppercase;
+}
+
+#address{
+    float: right;
+    color: #FFFFFF;
+    font-family: Web-Raleway;
+}
+
+#footer{
+    background: #323232;
+    background-size: cover;
+    -webkit-background-size: cover;
+    padding: 25px 0;
+    font-family: Web-Raleway;
+}
+
+#copyright{
+    float: right;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: Web-Raleway;
+}
+
+
+/* now make it responsive */
+@media screen and (max-width : 1095px) {
+
+    .center{
+        width: auto;
+        padding: 0 20px;
+        margin: 0;
+    }
+}
+
