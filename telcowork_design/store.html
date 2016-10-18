@@ -1,0 +1,533 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Store — Telcowork.co</title>
+    <!--
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    -->
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href='css/rotating-card.css' rel='stylesheet' />
+    <style type="text/css">
+        .snip1268 {
+          font-family: 'Raleway', Arial, sans-serif;
+          position: relative;
+          float: left;
+          overflow: hidden;
+          margin: 10px 1%;
+          min-width: 220px;
+          max-width: 260px;
+          width: 100%;
+          color: #333333;
+          text-align: center;
+          background-color: #ffffff;
+          line-height: 1.6em;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+		border-top: 3px solid #62DA20;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);          
+        }
+        .snip1268 * {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+        }
+        .snip1268 .image {
+          position: relative;
+        }
+        .snip1268 img {
+          max-width: 100%;
+          vertical-align: top;
+          -webkit-transition: opacity 0.35s;
+          transition: opacity 0.35s;
+        }
+        .snip1268 .icons,
+        .snip1268 .add-to-cart {
+          position: absolute;
+          left: 20px;
+          right: 20px;
+          opacity: 0;
+        }
+        .snip1268 .icons {
+          -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+          top: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .snip1268 .icons a {
+          width: 32.5%;
+          background: #62DA20;
+        }
+        .snip1268 .icons a:hover {
+          background: #FE7B3B;
+        }
+        .snip1268 .icons a:hover i {
+          color: #ffffff;
+          opacity: 1;
+        }
+        .snip1268 .icons i {
+          line-height: 46px;
+          font-size: 20px;
+          color: #fff;
+          text-align: center;
+          margin: 0;
+        }
+        .snip1268 .add-to-cart {
+          position: absolute;
+          bottom: 20px;
+          -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+          font-size: 0.8em;
+          color: #000000;
+          line-height: 46px;
+          letter-spacing: 1.5px;
+          background-color: #ffffff;
+          font-weight: 700;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        .snip1268 .add-to-cart:hover {
+          background: #000000;
+          color: #ffffff;
+        }
+        .snip1268 figcaption {
+          padding: 20px 20px 30px;
+        }
+        .snip1268 h2,
+        .snip1268 p {
+          margin: 0;
+          text-align: left;
+        }
+        .snip1268 h2 {
+          margin-bottom: 10px;
+          font-weight: 700;
+        }
+        .snip1268 p {
+          margin-bottom: 15px;
+          font-size: 0.85em;
+          font-weight: 500;
+          text-transform: lowercase;
+        }
+        .snip1268 .price {
+          font-size: 1.3em;
+          opacity: 0.5;
+          font-weight: 700;
+          text-align: right;
+        }
+        .snip1268:hover img,
+        .snip1268.hover img {
+          opacity: 0.8;
+        }
+        .snip1268:hover .icons,
+        .snip1268.hover .icons,
+        .snip1268:hover .add-to-cart,
+        .snip1268.hover .add-to-cart {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+        }    
+        .right-inner-addon {
+            position: relative;
+        }        
+        .right-inner-addon input {
+            padding-right: 30px;    
+        }
+        .right-inner-addon i {
+            position: absolute;
+            right: 0px;
+            padding: 10px 23px;
+            pointer-events: none;
+        }        
+    </style>
+</head>
+<body>
+    <!--
+    <div class="preloader">
+        <div class="preloder-wrap">
+            <div class="preloder-inner"> 
+                <img src="images/pre-load-logos.svg">
+            </div>
+        </div>
+    </div><!--/.preloader-->
+	<section class="banner-store" role="banner">
+        <header id="header" class="header fixed">
+            <div class="header-content header-top clearfix">
+                <a class="logo" href="index.html">
+                                    
+                    <img class="logo-brand img-responsive" id="open-button" src="images/logo-telco-2.png" alt="">
+                </a>
+                <nav class="navigation" role="navigation">     
+                    <ul class="primary-nav navbar-left">
+                        <li><a href="list-owner.html">Project Owner</a></li>
+                        <li><a href="list-consultant.html">Consultant</a></li>
+                        <li><a href="list-freelancer.html">Freelancer</a></li>
+                        <li><a href="list-trader.html">Trader</a></li>
+                    </ul>                       
+                    <ul class="primary-nav navbar-right">
+                        <li><a href="auth/login.html">Log In</a></li>
+                        <li class="regis"><a class="btn-signup" href="auth/signup.html">Sign Up</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="nav-toggle">Menu<span></span></a>
+            </div><!-- header content -->
+        </header><!-- header -->    
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-text-list text-center">
+                    <h1>Store</h1>
+                    <p>Get The Latest Tools For Your Project With The Most Reasonable Price.</p>
+                </div><!-- banner text -->
+            </div>
+        </div>           
+    </section><!-- banner -->  
+   
+    <!-- Section Top Talents -->
+    <section class="section download">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" style="margin-bottom: 20px;">
+                    <div class="text-center">
+                        <h3>Store</h3>
+                        <h3><small>Trusted telco tools from trader in more location</small></h3>
+                    </div> 
+					<a href="buyer-guidance.html" class="btn btn-default pull-left"><i class="fa fa-book"></i>&nbsp; Buyer Guidance</a>
+                </div> 
+            </div>
+        </div> 
+        <div class="container-fluid list-store"> 
+            <div class="row">  
+                <div class="col-md-3">
+                    <div class="row title-tab-project" style="margin-bottom:10px">
+                        <div class="col-md-12 col-sm-5 col-xs-7">
+                            
+                        </div>
+                    </div>
+                        <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="color:#fff">Categories</h3>
+                            </div>
+                            <ul class="list-group" style="margin-top: 10%;">
+                                <a href="#">
+                                <li class="list-group-item">
+                                        2G Technology (7)
+                                </li>
+                                </a>
+                                <a href="#">
+                                <li class="list-group-item">
+                                        3G Technology (4)
+                                </li>
+                                </a>
+                                <a href="#">
+                                <li class="list-group-item">
+                                        4G Technology (2)
+                                </li>
+                                </a>
+                                <a href="#">
+                                <li class="list-group-item">
+                                        Net Deployment (21)
+                                </li>
+                                </a>
+                                <a href="#">
+                                <li class="list-group-item">
+                                        Net Optimization (28)
+                                </li>
+                                </a>
+                                <a href="#">
+                                <li class="list-group-item">
+                                        Net Planning (34)
+                                </li>
+                                </a>
+                            </ul>
+                        </div>
+                        </div>                     
+                </div>
+                <div class="col-md-9">
+                    <div class="row" style="margin-bottom:10px;">
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>Sort by</option>
+                                <option>Name Ascending</option>
+                                <option>Name Descending</option>
+                                <option>Newest</option>
+                                <option>Downloads</option>
+                                <option>Views</option>
+                                <option>Rating</option>
+                            </select>                           
+                        </div>
+                        <div class="col-md-3 col-sm-offset-6 right-inner-addon">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control" placeholder="Search">                           
+                        </div>
+                    </div>  
+					<div class="row">
+						<figure class="snip1268">
+						  <div class="image">
+							<img src="images/item-1.jpg" alt="sq-sample15"/>
+							<div class="icons">
+							  <a href="#"><i class="fa fa-star"></i></a>
+							  <a href="#"> <i class="fa fa-share-alt"></i></a>
+							  <a href="store-detail.html"> <i class="fa fa-search"></i></a>
+							</div>
+							<!-- 
+							<a href="#" class="add-to-cart">Add to Cart</a>
+							-->
+						  </div>
+						  <figcaption>
+							<h3>GROUNDTESTER</h3>
+							<p>Silahkan barang kali ada yg perlu bon pembelian ada .pembelian bulan 1 2016. Harga 1.7 juta, pas !</p>
+							<div class="row">
+							<div class="col-md-4">
+								<div class="price"><small>$195.00</small></div>
+							</div>
+							<div class="col-md-8">
+								<div class="price"><small>by<a href="#"> Telco Work<i class="fa fa-user" style="margin-left: 4px"></i></small></a></div>
+							</div>
+							</div>
+						  </figcaption>
+						</figure>
+						<figure class="snip1268">
+						  <div class="image">
+							<img src="images/item-2.jpg" alt="sq-sample15"/>
+							<div class="icons">
+							  <a href="#"><i class="fa fa-star"></i></a>
+							  <a href="#"> <i class="fa fa-share-alt"></i></a>
+							  <a href="store-detail.html"> <i class="fa fa-search"></i></a>
+							</div>
+							<!--
+							<a href="#" class="add-to-cart">Add to Cart</a>
+							-->
+
+						  </div>
+						  <figcaption>
+							<h3>Thinkpad X240-Core i5</h3>
+							<p>Lektop Sakti spesifikasi militer untuk penggunaan Lapangan/Outdoor, Professoonal dan bisnis.</p>
+							<div class="row">
+							<div class="col-md-4">
+								<div class="price"><small>$195.00</small></div>
+							</div>
+							<div class="col-md-8">
+								<div class="price"><small>by<a href="#"> Telco Work<i class="fa fa-user" style="margin-left: 4px"></i></small></a></div>
+							</div>
+							</div>
+						  </figcaption>
+						</figure>
+						<figure class="snip1268">
+						  <div class="image">
+							<img src="images/item-3.jpg" alt="sq-sample15"/>
+							<div class="icons">
+							  <a href="#"><i class="fa fa-star"></i></a>
+							  <a href="#"> <i class="fa fa-share-alt"></i></a>
+							  <a href="store-detail.html"> <i class="fa fa-search"></i></a>
+							</div>
+							<!--
+							<a href="#" class="add-to-cart">Add to Cart</a>
+							-->
+						  </div>
+						  <figcaption>
+							<h3>GPS GARMIN</h3>
+							<p>NEMO HANDY S5 kondisi baru.ada 3 unit nih harga aturable, klo kurang masih tersedia lagi 12 unit (ngabisin stock).</p>
+							<div class="row">
+							<div class="col-md-4">
+								<div class="price"><small>$195.00</small></div>
+							</div>
+							<div class="col-md-8">
+								<div class="price"><small>by<a href="#"> Telco Work<i class="fa fa-user" style="margin-left: 4px"></i></small></a></div>
+							</div>
+							</div>
+						  </figcaption>
+						</figure>  
+                    </div>
+					
+					<div class="row">
+						<figure class="snip1268">
+						  <div class="image">
+							<img src="images/item-4.jpg" alt="sq-sample15"/>
+							<div class="icons">
+							  <a href="#"><i class="fa fa-star"></i></a>
+							  <a href="#"> <i class="fa fa-share-alt"></i></a>
+							  <a href="store-detail.html"> <i class="fa fa-search"></i></a>
+							</div>
+							<!--
+							<a href="#" class="add-to-cart">Add to Cart</a>
+							-->
+						  </div>
+						  <figcaption>
+							<h3>NEMO HANDY S5</h3>
+							<p>NEMO HANDY S5 kondisi baru.ada 3 unit nih harga aturable, klo kurang masih tersedia lagi 12 unit (ngabisin stock).</p>
+							<div class="row">
+							<div class="col-md-4">
+								<div class="price"><small>$195.00</small></div>
+							</div>
+							<div class="col-md-8">
+								<div class="price"><small>by<a href="#"> Telco Work<i class="fa fa-user" style="margin-left: 4px"></i></small></a></div>
+							</div>
+							</div>
+						  </figcaption>
+						</figure>
+						<figure class="snip1268">
+						  <div class="image">
+							<img src="images/prod-2.jpg" alt="sq-sample15"/>
+							<div class="icons">
+							  <a href="#"><i class="fa fa-star"></i></a>
+							  <a href="#"> <i class="fa fa-share-alt"></i></a>
+							  <a href="store-detail.html"> <i class="fa fa-search"></i></a>
+							</div>
+							<!--
+							<a href="#" class="add-to-cart">Add to Cart</a>
+							-->
+						  </div>
+						  <figcaption>
+							<h3>Remote Photoelectric</h3>
+							<p>Miss Wormwood: What state do you live in? Calvin: Denial. Miss Wormwood: I don't suppose I can argue with that!</p>
+							<div class="row">
+							<div class="col-md-3">
+								<div class="price"><small>$195.00</small></div>
+							</div>
+							<div class="col-md-8">
+								<div class="price"><small>by<a href="#"> Telco Work<i class="fa fa-user" style="margin-left: 4px"></i></small></a></div>
+							</div>
+							</div>
+						  </figcaption>
+						</figure>
+						<figure class="snip1268">
+						  <div class="image">
+							<img src="images/prod-3.jpg" alt="sq-sample15"/>
+							<div class="icons">
+							  <a href="#"><i class="fa fa-star"></i></a>
+							  <a href="#"> <i class="fa fa-share-alt"></i></a>
+							  <a href="store-detail.html"> <i class="fa fa-search"></i></a>
+							</div>
+							<!--
+							<a href="#" class="add-to-cart">Add to Cart</a>
+							-->
+						  </div>
+						  <figcaption>
+							<h3>Multiplexed Amplifiers</h3>
+							<p>Miss Wormwood: What state do you live in? Calvin: Denial. Miss Wormwood: I don't suppose I can argue with that!</p>
+							<div class="row">
+							<div class="col-md-4">
+								<div class="price"><small>$195.00</small></div>
+							</div>
+							<div class="col-md-8">
+								<div class="price"><small>by<a href="#"> Telco Work<i class="fa fa-user" style="margin-left: 4px"></i></small></a></div>
+							</div>
+							</div>
+						  </figcaption>
+						</figure>                                       
+					</div>
+				</div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="section download">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Don't forget to subscribe for new your favorite item</h3>
+                    <a href="#" class="btn btn-large">Subscribe</a>
+                </div>               
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Footer -->
+    <footer class="footer">  
+        <div class="footer-top">
+            <div class="container">
+                <div class="row" style="border-bottom: 1px solid #fff">
+                    <div class="footer-col col-md-3">
+                        <h5>Telcowork</h5>
+                        <hr class="hr-footer" style="height:2px;width:50px;color:#fff">                        
+                        <ul class="list-telco">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="forum/forum.html">Forum</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="store.html">Store</a></li>
+                        </ul>
+                    </div>
+                   <div class="footer-col col-md-3">
+                        <h5>Info</h5>
+                        <hr class="hr-footer" style="height:2px;width:50px;color:#fff">                        
+                        <ul class="list-telco">
+                            <li><a href="who-we-are.html">Who We Are</a></li>
+                            <li><a href="blog.html">Vision & Mission</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>                    
+                    <div class="footer-col col-md-3">
+                        <h5>Social Media</h5>
+                        <hr class="hr-footer" style="height:2px;width:50px;color:#fff">                        
+                        <ul class="footer-share">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/kamal_chaneman"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/kamalchaneman"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-3">
+                        <h5>Knowledge Base</h5>
+                        <hr class="hr-footer" style="height:2px;width:50px;color:#fff">                        
+                        <ul class="list-telco">
+                            <li><a href="tdlibrary/knowledge-base.html">Digital Library</a></li>
+                        </ul>
+                    </div>                
+                </div>
+            </div>
+        </div><!-- footer top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="col-md-12">
+                    <p>Copyright © 2016 Telcowork. All Rights Reserved<br>Made with <i class="fa fa-heart pulse"></i> by <a href="#">Konekthing</a></p>
+                </div>
+            </div>
+        </div>
+    </footer><!-- footer -->
+
+<script>$('.hover').mouseleave(function () {
+    $(this).removeClass('hover');
+});
+//# sourceURL=pen.js
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main2.js"></script>
+        <script src="js/toucheffects.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+    <!-- Plugin
+    <script src="js/classie.js"></script>
+    <script src="js/main3.js"></script>
+    -->
+
+    <!-- Animate scroll navbar
+    <script src="js/cbpAnimatedHeader.min.js"></script>
+    <script src="http://tympanus.net/Blueprints/AnimatedHeader/js/classie.js"></script>
+    -->
+</body>
+</html>

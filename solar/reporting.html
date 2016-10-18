@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reporting - Solar MiniERP</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- NProgress -->
+  <link rel="stylesheet" type="text/css" href="plugins/nprogress/nprogress.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Sweetalert -->
+  <link rel="stylesheet" type="text/css" href="plugins/sweetalert/sweetalert.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/css/style-solar.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="assets/css/skins/_all-skins.css">
+  <!-- WaitMe Style -->
+  <link rel="stylesheet" type="text/css" href="plugins/waitMe/waitMe.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="plugins/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/datatables/extensions/FixedHeader/css/fixedHeader.bootstrap.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-black-light layout-top-nav">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <header class="main-header">
+    <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><b>Solar</b>&nbsp;MiniERP</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+            </div>
+          </form>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
+            <li class="dropdown messages-menu">
+              <!-- Menu toggle button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-envelope-o"></i>
+                <span class="label label-success">4</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 4 messages</li>
+                <li>
+                  <!-- inner menu: contains the messages -->
+                  <ul class="menu">
+                    <li><!-- start message -->
+                      <a href="#">
+                        <div class="pull-left">
+                          <!-- User Image -->
+                          <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">
+                        </div>
+                        <!-- Message title and timestamp -->
+                        <h4>
+                          Support Team
+                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        </h4>
+                        <!-- The message -->
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <!-- end message -->
+                  </ul>
+                  <!-- /.menu -->
+                </li>
+                <li class="footer"><a href="#">See All Messages</a></li>
+              </ul>
+            </li>
+            <!-- /.messages-menu -->
+
+            <!-- Notifications Menu -->
+            <li class="dropdown notifications-menu">
+              <!-- Menu toggle button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 10 notifications</li>
+                <li>
+                  <!-- Inner Menu: contains the notifications -->
+                  <ul class="menu">
+                    <li><!-- start notification -->
+                      <a href="#">
+                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      </a>
+                    </li>
+                    <!-- end notification -->
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+              </ul>
+            </li>
+
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <img src="assets/img/avatar5.png" class="user-image" alt="User Image">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">Admin Solar</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header">
+                  <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">
+
+                  <p>
+                    Admin Solar - Administrator
+                    <small>Member since Nov. 2012</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="login.html" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+
+  <!-- =============================================== -->
+
+  <header class="main-header" id="subheader">
+  </header>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div id="content" class="content-wrapper">
+    <div class="container">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row text-center">
+              <ul class="nav nav-menu-custom nav-justified">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <li>
+                    <a href="index.html" class="btn btn-app bg" data-loading-effect="facebook">
+                      <i class="fa fa-dashboard fa-2-8x"></i> 
+                      <span class="text-menu-custom hidden-xs">Dashboard</span>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <li>
+                    <a href="supplier.html" class="btn btn-app bg" data-loading-effect="facebook">
+                      <i class="fa fa-truck fa-2-8x"></i> 
+                      <span class="text-menu-custom hidden-xs">Supplier</span>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <li>
+                    <a href="customer.html" class="btn btn-app bg" data-loading-effect="facebook">
+                      <i class="fa fa-users fa-2-8x"></i> 
+                      <span class="text-menu-custom hidden-xs">Customer</span>
+                    </a>                
+                  </li>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <li class="active">
+                    <a href="#" class="btn btn-app bg">
+                      <i class="fa fa-tasks fa-2-8x"></i> 
+                      <span class="text-menu-custom hidden-xs">Reporting</span>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <li>
+                    <a href="transaction.html" class="btn btn-app bg">
+                      <i class="fa fa-exchange fa-2-8x"></i> 
+                      <span class="text-menu-custom hidden-xs">Transaction</span>
+                    </a>
+                  </li>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <li>
+                    <a href="settings.html" class="btn btn-app bg">
+                      <i class="fa fa-cog fa-2-8x"></i> 
+                      <span class="text-menu-custom hidden-xs">Settings</span>
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main content -->
+      <section id="content-body" class="content">
+        <div class="main main-raised-solar tab-content">
+          <!-- Section Reporting -->
+          <div id="customer" class="tab-pane fade in active">
+            <section class="content-header">
+              <h1>Reporting</h1>
+              <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                <li class="active">Reporting</li>
+              </ol>
+            </section>
+            <section class="content">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="box box-white">
+                    <div class="box-body">
+                      <div class="jumbotron">
+                        <form class="form-inline text-center">
+                          <div class="form-group">
+                            <label for="inputStartDate">Start Date &nbsp;: &nbsp;</label>
+                            <div class="input-group date">
+                              <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                              </div>
+                              <input type="text" class="form-control pull-right" id="dpStartDate" placeholder="dd/mm/yyyy">
+                            </div>
+                            &nbsp;
+                          </div>
+                          <div class="form-group">
+                            <label for="inputUntilDate">Until Date &nbsp;: &nbsp;</label>
+                            <div class="input-group date">
+                              <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                              </div>
+                              <input type="text" class="form-control pull-right" id="dpUntilDate" placeholder="dd/mm/yyyy">
+                            </div>
+                            &nbsp;
+                          </div>
+                          <button type="submit" class="btn btn-custom bg-custom"><i class="fa fa-check-circle"></i>&nbsp; Process</button>
+                          <button type="button" class="btn btn-custom bg-custom" data-toggle="modal" data-target="#viewReport"><i class="fa fa-eye"></i>&nbsp; View</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>                
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="box box-white">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">List Reporting</h3>
+                      <div class="box-tools">
+                        <div class="btn-group">
+                          <button id="refreshReporting" type="button" class="btn btn-default btn-sm" data-loading-effect="ios"><i class="fa fa-refresh"></i>&nbsp; Refresh</button>
+                        </div>                        
+                      </div>  
+                    </div>
+
+                      <!-- Add Supplier -->
+                      <div id="addCustomer" class="collapse fade">
+                        <div class="jumbotron">
+                          <h4>Add Customer <small class="pull-right" data-toggle="collapse" data-target="#addSupplier"><a href="#" class="label label-default" data-toggle="tooltip" title="Close"><i class="fa fa-times"></i></a></small></h4>
+                          <div class="ln_solid"></div>
+                          <form class="form-horizontal">
+                            <div class="box-body">
+                              <div class="form-group">
+                                <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                                <div class="col-sm-7">
+                                  <input type="name" class="form-control" id="inputName" placeholder="Customer Name"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputAddress" class="col-sm-2 control-label">Address</label>
+
+                                <div class="col-sm-7">
+                                  <textarea type="address" class="form-control" id="inputAddress" placeholder="Address" data-error="Please fill this field, don't empty" required></textarea>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputCountry" class="col-sm-2 control-label">Country</label>
+
+                                <div class="col-sm-7">
+                                  <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputProvince" class="col-sm-2 control-label">Province</label>
+
+                                <div class="col-sm-7">
+                                  <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Jawa Barat</option>
+                                    <option>DKI Jakarta</option>
+                                    <option>Jawa Timur</option>
+                                    <option>Kalimantan Barat</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputProvince" class="col-sm-2 control-label">City</label>
+
+                                <div class="col-sm-7">
+                                  <select class="form-control select2" disabled="disabled" style="width: 100%;">
+                                    <option selected="selected">Bandung</option>
+                                    <option>Jakarta</option>
+                                    <option>Malang</option>
+                                    <option>Pontianak</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputPostalCode" class="col-sm-2 control-label">Postal Code</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputPostalCode" placeholder="Postal Code">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputFax" class="col-sm-2 control-label">Fax</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputFax" placeholder="Fax">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputPhn" class="col-sm-2 control-label">Phone</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputPhn" placeholder="Phone"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputEmail" class="col-sm-2 control-label">E-mail</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputEmail" placeholder="E-mail"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputDelegation" class="col-sm-2 control-label">Delegation</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputDelegation" placeholder="Delegation"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="ln_solid"></div>
+                              <div class="form-group">
+                                <div class="col-sm-9">
+                                  <div class="pull-right">
+                                    <button type="button" class="btn btn-default cancel" data-toggle="collapse" data-target="#addSupplier">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                  </div>                                  
+                                </div>                                
+                              </div>
+                            </div>
+                            <!-- /.box-body -->
+
+                            <!-- /.box-footer -->
+                          </form>
+                        </div>
+                      </div>                    
+
+                      <!-- Add Supplier -->
+                      <div id="editCustomer" class="collapse fade">
+                        <div class="jumbotron">
+                          <h4>Edit Customer <small class="pull-right" data-toggle="collapse" data-target="#addSupplier"><a href="#" class="label label-default" data-toggle="tooltip" title="Close"><i class="fa fa-times"></i></a></small></h4>
+                          <div class="ln_solid"></div>
+                          <form class="form-horizontal">
+                            <div class="box-body">
+                              <div class="form-group">
+                                <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                                <div class="col-sm-7">
+                                  <input type="name" class="form-control" id="inputName" placeholder="Customer Name" value="Pak Kamal"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputAddress" class="col-sm-2 control-label">Address</label>
+
+                                <div class="col-sm-7">
+                                  <textarea type="address" class="form-control" id="inputAddress" placeholder="Address" data-error="Please fill this field, don't empty" required>Jl.Kemang</textarea>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputCountry" class="col-sm-2 control-label">Country</label>
+
+                                <div class="col-sm-7">
+                                  <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Indonesia</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputProvince" class="col-sm-2 control-label">Province</label>
+
+                                <div class="col-sm-7">
+                                  <select class="form-control select2" style="width: 100%;">
+                                    <option>Jawa Barat</option>
+                                    <option selected="selected">DKI Jakarta</option>
+                                    <option>Jawa Timur</option>
+                                    <option>Kalimantan Barat</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputProvince" class="col-sm-2 control-label">City</label>
+
+                                <div class="col-sm-7">
+                                  <select class="form-control select2" disabled="disabled" style="width: 100%;">
+                                    <option>Bandung</option>
+                                    <option selected="selected">Jakarta</option>
+                                    <option>Malang</option>
+                                    <option>Pontianak</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputPostalCode" class="col-sm-2 control-label">Postal Code</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputPostalCode" placeholder="Postal Code">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputFax" class="col-sm-2 control-label">Fax</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputFax" placeholder="Fax">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputPhn" class="col-sm-2 control-label">Phone</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputPhn" placeholder="Phone" value="08129983292"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputEmail" class="col-sm-2 control-label">E-mail</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputEmail" placeholder="E-mail" value="kamal@gmail.com"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputDelegation" class="col-sm-2 control-label">Delegation</label>
+
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputDelegation" placeholder="Delegation" value="Pak Kamal"  data-error="Please fill this field, don't empty" required>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="ln_solid"></div>
+                              <div class="form-group">
+                                <div class="col-sm-9">
+                                  <div class="pull-right">
+                                    <button type="button" class="btn btn-default cancel" data-toggle="collapse" data-target="#addSupplier">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                  </div>                                  
+                                </div>                                
+                              </div>
+                            </div>
+                            <!-- /.box-body -->
+
+                            <!-- /.box-footer -->
+                          </form>
+                        </div>
+                      </div>                    
+
+                      <!-- Detail Customer -->
+                      <div id="detailCustomer" class="collapse fade">
+                        <div class="jumbotron">
+                          <h4>Customer of Pak Kamal <small class="pull-right" data-toggle="collapse" data-target="#detailCustomer"><a href="#" class="label label-default" data-toggle="tooltip" title="Close"><i class="fa fa-times"></i></a></small></h4>
+                          <div class="ln_solid"></div>
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tbody><tr>
+                                <th style="width:50%"><i class="ion ion-location"></i>&nbsp; Country :</th>
+                                <td>Indonesia</td>
+                              </tr>
+                              <tr>
+                                <th><i class="ion ion-map"></i>&nbsp; Postal Code:</th>
+                                <td>16418</td>
+                              </tr>
+                              <tr>
+                                <th><i class="ion-android-call"></i>&nbsp; Fax:</th>
+                                <td>776564</td>
+                              </tr>
+                            </tbody></table>
+                          </div>
+                        </div>
+                      </div>                      
+
+                    <div class="box-body">
+                      <table id="tableReporting" class="table jambo_table table-hover" width="100%">
+                        <thead>
+                          <tr>
+                            <th>No.</th>
+                            <th>Customer</th>
+                            <th>Qts Num</th>
+                            <th>PO Num</th>
+                            <th>DO Num</th>
+                            <th>Invoice Num</th>
+                            <th>Tax Num</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>11</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Ibnu</td>
+                            <td>2423282942852 2015-08-10 </td>
+                            <td>728092582093842309 2015-08-11</td>
+                            <td>0349324892842 2015-08-10</td>
+                            <td>2628746237 2015-08-12</td>
+                            <td>2842098202 0000-00-00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- /.content -->
+    </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.0
+      </div>
+      <strong>Copyright &copy; 2016 <a href="http://konekthing.com">Konekthing</a>.</strong> All rights
+      reserved.
+    </div>
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+<div id="viewReport" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">View Report</h4>
+      </div>
+      <div class="modal-body">
+        <table id="tableViewReport" class="table jambo_table table-hover" width="100%">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Tanggal</th>
+              <th>No Invoice</th>
+              <th>No Faktur</th>
+              <th>Perusahaan</th>
+              <th>PPN</th>
+              <th>PBBKB</th>
+              <th>Royalti</th>
+              <th>Volume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2015-08-04</td>
+              <td>40/solar-88/90</td>
+              <td>TNV/11/5675</td>
+              <td>Desmon Corp</td>
+              <td>Rp. 27000000</td>
+              <td>549800</td>
+              <td>Rp.</td>
+              <td>2000 Liter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-custom bg-custom"><i class="fa fa-print"></i>&nbsp; Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- NProgress -->
+<script src="plugins/nprogress/nprogress.js"></script>
+<script src="plugins/nprogress/config.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- SlimScroll 1.3.0 -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- bootstrap datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script src="plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/js/app.min.js"></script>
+<!-- ChartJS 1.0.1 -->
+<script src="plugins/chartjs/Chart.min.js"></script>
+<!-- Select2 -->
+<script src="plugins/select2/select2.full.min.js"></script>
+<!-- WaitMe JS -->
+<script src="plugins/waitMe/waitMe.min.js"></script>
+<script src="plugins/waitMe/config.js"></script>
+<!-- Sweetalert -->
+<script src="plugins/sweetalert/sweetalert.js"></script>
+<script src="plugins/sweetalert/delete.js"></script>
+<!-- Validator -->
+<script src="plugins/bootstrap-validator/validator.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var $dtReporting = $('#tableReporting');
+
+    $dtReporting.dataTable({
+      'order': [[ 1, 'asc']],
+      'fixedHeader': true,
+      'padding': true,
+      'language': {
+        searchPlaceholder: "Search Report"
+      },
+      'columnDefs': [
+        { orderable: false, targets: [0]}
+      ]      
+    });
+
+    $(".select2").select2();
+    $("form").validator();
+    $('[data-toggle="tooltip"]').on('click', function(){
+      $('[data-toggle="tooltip"]').tooltip('hide');
+    });
+
+    //Date picker
+    $('#dpStartDate').datepicker({
+      autoclose: true
+    });
+    //Date picker
+    $('#dpUntilDate').datepicker({
+      autoclose: true
+    });
+  
+  });
+</script>
+
+</body>
+</html>
