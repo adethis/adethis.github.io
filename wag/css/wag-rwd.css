@@ -378,5 +378,11 @@
 	    text-align: left;
 	    padding-left: 20px;
 	}
+	.group1-custom p {
+	    display: inline-table;
+	    width: 100%;
+	    color: #fff;
+	    font-size: 10px;
+	}
 
 }
