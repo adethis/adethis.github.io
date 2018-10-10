@@ -1,87 +1,206 @@
-jQuery(document).ready(function($){
-	//wrap each one of your filter in a .cd-gallery-container
-	bouncy_filter($('.cd-gallery-container'));
+ AOS.init({
+ 	duration: 800,
+ 	easing: 'slide'
+ });
 
-	function bouncy_filter($container) {
-		$container.each(function(){
-			var $this = $(this);
-			var filter_list_container = $this.children('.cd-filter'),
-				filter_values = filter_list_container.find('li:not(.placeholder) a'),
-				filter_list_placeholder = filter_list_container.find('.placeholder a'),
-				filter_list_placeholder_text = filter_list_placeholder.text(), 
-				filter_list_placeholder_default_value = 'Select',
-				gallery_item_wrapper = $this.children('.cd-gallery').find('.cd-item-wrapper');
+$(document).ready(function($) {
 
-			//store gallery items
-			var gallery_elements = {};
-			filter_values.each(function(){
-				var filter_type = $(this).data('type');
-				gallery_elements[filter_type] = gallery_item_wrapper.find('li[data-type="'+filter_type+'"]');
-			});
+	"use strict";
 
-			//detect click event
-			filter_list_container.on('click', function(event){
-				event.preventDefault();
-				//detect which filter item was selected
-				var selected_filter = $(event.target).data('type');
-					
-				//check if user has clicked the placeholder item (for mobile version)
-				if( $(event.target).is(filter_list_placeholder) || $(event.target).is(filter_list_container) ) {
+	$(window).stellar({
+    responsive: false,
+    parallaxBackgrounds: true,
+    parallaxElements: true,
+    horizontalScrolling: false,
+    hideDistantElements: false,
+    scrollProperty: 'scroll'
+  });
 
-					(filter_list_placeholder_default_value == filter_list_placeholder.text()) ? filter_list_placeholder.text(filter_list_placeholder_text) : filter_list_placeholder.text(filter_list_placeholder_default_value) ;
-					filter_list_container.toggleClass('is-open');
+	// Scrollax
+  $.Scrollax();
 
-				//check if user has clicked a filter already selected 
-				} else if( filter_list_placeholder.data('type') == selected_filter ) {
-					
-					filter_list_placeholder.text($(event.target).text()) ;
-					filter_list_container.removeClass('is-open');	
 
-				} else {
-					//close the dropdown (mobile version) and change placeholder text/data-type value
-					filter_list_container.removeClass('is-open');
-					filter_list_placeholder.text($(event.target).text()).data('type', selected_filter);
-					filter_list_placeholder_text = $(event.target).text();
-					
-					//add class selected to the selected filter item
-					filter_values.removeClass('selected');
-					$(event.target).addClass('selected');
+	// loader
+	var loader = function() {
+		setTimeout(function() { 
+			if($('#ftco-loader').length > 0) {
+				$('#ftco-loader').removeClass('show');
+			}
+		}, 1);
+	};
+	loader();
 
-					//give higher z-index to the gallery items selected by the filter
-					show_selected_items(gallery_elements[selected_filter]);
+	var carousel = function() {
+		$('.home-slider').owlCarousel({
+	    loop:true,
+	    autoplay: true,
+	    margin:0,
+	    animateOut: 'fadeOut',
+	    animateIn: 'fadeIn',
+	    nav:false,
+	    dots: false,
+	    autoplayHoverPause: false,
+	    items: 1,
+	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+	    responsive:{
+	      0:{
+	        items:1,
+	        nav:false
+	      },
+	      600:{
+	        items:1,
+	        nav:false
+	      },
+	      1000:{
+	        items:1,
+	        nav:false
+	      }
+	    }
+	   });
+	};
+	carousel();
 
-					//rotate each item-wrapper of the gallery
-					//at the end of the animation hide the not-selected items in the gallery amd rotate back the item-wrappers
-					
-					// fallback added for IE9
-					var is_explorer_9 = navigator.userAgent.indexOf('MSIE 9') > -1;
-					
-					if( is_explorer_9 ) {
-						hide_not_selected_items(gallery_elements, selected_filter);
-						gallery_item_wrapper.removeClass('is-switched');
-					} else {
-						gallery_item_wrapper.addClass('is-switched').eq(0).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {		
-							hide_not_selected_items(gallery_elements, selected_filter);
-							gallery_item_wrapper.removeClass('is-switched');
-						});
-					}
-				}
-			});
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
 		});
+
+	};
+	fullHeight();
+
+	var burgerMenu = function() {
+
+		$('.js-colorlib-nav-toggle').on('click', function(event) {
+			event.preventDefault();
+			var $this = $(this);
+			if( $('body').hasClass('menu-show') ) {
+				$('body').removeClass('menu-show');
+				$('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
+			} else {
+				$('body').addClass('menu-show');
+				setTimeout(function(){
+					$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
+				}, 900);
+			}
+		})
+	};
+	burgerMenu();
+	
+	var counter = function() {
+		
+		$('#section-counter').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+
+				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+				$('.number').each(function(){
+					var $this = $(this),
+						num = $this.data('number');
+						console.log(num);
+					$this.animateNumber(
+					  {
+					    number: num,
+					    numberStep: comma_separator_number_step
+					  }, 7000
+					);
+				});
+				
+			}
+
+		} , { offset: '95%' } );
+
 	}
+	counter();
+
+	var contentWayPoint = function() {
+		var i = 0;
+		$('.ftco-animate').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+				
+				i++;
+
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
+
+					$('body .ftco-animate.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							var effect = el.data('animate-effect');
+							if ( effect === 'fadeIn') {
+								el.addClass('fadeIn ftco-animated');
+							} else if ( effect === 'fadeInLeft') {
+								el.addClass('fadeInLeft ftco-animated');
+							} else if ( effect === 'fadeInRight') {
+								el.addClass('fadeInRight ftco-animated');
+							} else {
+								el.addClass('fadeInUp ftco-animated');
+							}
+							el.removeClass('item-animate');
+						},  k * 50, 'easeInOutExpo' );
+					});
+					
+				}, 100);
+				
+			}
+
+		} , { offset: '95%' } );
+	};
+	contentWayPoint();
+
+
+	// magnific popup
+	$('.image-popup').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+     gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+
+   
+   $('#appointment_date').datepicker({
+	  'format': 'm/d/yyyy',
+	  'autoclose': true
+	});
+	$('#appointment_time').timepicker();
+
+	var pageProgress = function() {
+		$(window).scroll(function() {
+	    var wintop = $(window).scrollTop(), docheight = $('.page').height(), winheight = $(window).height();
+	    // console.log(wintop);
+	    var totalScroll = (wintop/(docheight-winheight))*100;
+	    // console.log("total scroll" + totalScroll);
+	    $(".KW_progressBar").css("width",totalScroll+"%");
+	  });
+
+	};
+	pageProgress();
+
+
 });
 
-function show_selected_items(selected_elements) {
-	selected_elements.addClass('is-selected');
-}
-
-function hide_not_selected_items(gallery_containers, filter) {
-	$.each(gallery_containers, function(key, value){
-  		if ( key != filter ) {	
-			$(this).removeClass('is-visible is-selected').addClass('is-hidden');
-
-		} else {
-			$(this).addClass('is-visible').removeClass('is-hidden is-selected');
-		}
-	});
-}

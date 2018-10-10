@@ -145,7 +145,7 @@ h5 {
 	border-radius: 5px;
 }
 	.group1 h5 {
-		color: #fff;
+		color: #272424;
 		font-family: 'Raleway', 'sans-serif';
 		text-shadow: none;
 		font-size: 18px;
@@ -190,7 +190,7 @@ header {
 	width: 98%;
 	position: relative;
 	float: right;
-	height:380px;
+	height:480px;
 	padding:10px;
 	background:transparent;
 	margin-top:65px;
@@ -320,7 +320,7 @@ nav {
 	background-color:#E3D8CA;
 	-moz-border-radius: 5px;
 	border-radius: 3px;
-	box-shadow: 4px 4px 0px rgb(250, 166, 26)
+	box-shadow: 4px 4px 0px rgb(250, 215, 26)
 }
 nav ul li {
 	float: left;
@@ -330,7 +330,7 @@ nav ul li {
 nav ul li a {
 	font-size: 18px;
 	font-family:'Raleway', 'sans-serif';
-	color:#ffaa96;
+	color:#fff;
 	font-weight: 600;
 	display:block;	/* IE6, IE7 line height fix */
 	background-color:transparent;
@@ -342,7 +342,7 @@ nav ul li a:hover {
 	color: #faa61a;
 	text-shadow: 0 0 5px rgba(250, 166, 26, 0.56)
 }
-nav ul li.active a { color: #fff }
+nav ul li.active a { color: #000;font-weight: 700 }
 .content_menu {
 	float: left;
 	width: 274px;

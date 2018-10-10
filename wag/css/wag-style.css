@@ -5,7 +5,7 @@
     content: "";
     position: absolute;
     height: 5px;
-    border-bottom: 1px dashed white;
+    border-bottom: 1px dashed #131111;
     top: 20px;
     width: 120px;
     margin-left: 10px;
@@ -42,7 +42,8 @@
     top: 210px;
     float: right;
     width: 330; 
-    height: 256 
+    height: 256;
+	left: 630px;
   }
   .onecol-custom {
     margin-right: 0;
@@ -69,7 +70,7 @@
     text-align: right;
     font-size: 12px;
     width: 65%;
-    color: #555;
+    color: #131111;
     font-style: italic;
   }
   .menu-unggl-custom {
@@ -77,6 +78,7 @@
     position: relative;
     height: 280px;
     float: right;
+	right: -30px
   }
   .thumbnail-left {
     background: #fff;
@@ -87,13 +89,12 @@
     width: 170px;
     padding: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.29);
-    z-index: 3;
-    transform: rotate(5deg);
   }
     .thumbnail-left img,
     .thumbnail-center img,
     .thumbnail-right img {
-      width: 205px
+      width: 205px;
+	  height: 120px
     }
     .thumbnail-left p,
     .thumbnail-center p,
@@ -110,10 +111,7 @@
     width: 170px;
     padding: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.29);
-    margin-left: -65px;
-    margin-right:-56px;
-    margin-top:60px;
-    z-index: 9
+    margin-left: 5px;
   }
   .thumbnail-right {
     background: #fff;
@@ -124,16 +122,14 @@
     width: 170px;
     padding: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.29);
-    margin-left: 15px;
-    z-index: 3;
-    transform: rotate(-5deg);
+    margin-left: 5px;
   }
   .container-front-custom {
     position: relative;
-    height: 390px;
+    height: 420px;
     clear: both;
     width: 80%;
-    background-color: #fa891a;
+    background-color: rgb(250, 215, 26);
     border-radius: 5px
   }
   .row-custom {
@@ -147,14 +143,14 @@
     width: 100%
   }
     .group1-custom ul {
-      color: #fff
+      color: #131111
     }
       .group1-custom ul li span { float: right; }
 
     .group1-custom p {
       display: inline-table;
       width: 45%;
-      color: #fff
+      color: #131111
     }
     .group1-custom small { font-size: 10px }
     .group1-custom small.phone { font-size: 12px }
@@ -166,7 +162,7 @@
     }
 
   .span-notice-custom {
-    color: #fff;
+    color: #131111;
     float: right;
     position: absolute;
     top: 0;
@@ -181,9 +177,9 @@
   .group1-custom-2 {
     background: none
   }
-    .group1-custom-2 small { color: #fff }
+    .group1-custom-2 small { color: #131111 }
     .group1-custom-2 p {
-      color: #fff;
+      color: #131111;
       margin-top: 10px      
     }
   .img-special-menu {
@@ -193,7 +189,7 @@
     width: 125px    
   }
   .title-menu-special {
-    color: #fff;
+    color: #131111;
     font-weight: 600;
     font-stretch: 3px    
   }
@@ -246,17 +242,21 @@
     ul.nav-menu-footer {
       list-style: none;
       display: inline;
-      width: 45%;color: #fff
+      width: 45%;
+	  color: #131111
     }
       ul.nav-menu-footer li {
         float: left;
-        margin: 30px
+        margin: 30px;
+		color: #131111
       }
+	  ul.nav-menu-footer li a { color: #131111;font-weight: 600 }
     ul.copyright-footer {
       list-style: none;
       display: inline;
       width: 35%;
-      color: #fff      
+	  font-weight: 600;
+      color: #272424;      
     }
       ul.copyright-footer li {
         float: right;
@@ -312,6 +312,17 @@ input[type=submit]:hover {
   z-index: 3;
   transform: rotate(5deg);"  
 }
+	.thumbnail-menu-unggul-left.single {
+		background: #fff;
+		display: block;
+		position: relative;
+		margin: 0% auto;
+		height: 310px;
+		width: 370px;
+		padding: 5px;
+		box-shadow: 0 0 15px rgba(0,0,0,0.29);
+		transform: rotate(0);
+	}
 .thumbnail-menu-unggul-center {
   background: #fff;
   display: inline-block;
@@ -349,10 +360,10 @@ input[type=submit]:hover {
 .description-menu-1 {
   float: left;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   color: #555;
-  margin-top: 20%;  
+  margin-top: 35%;  
 }
 
 .hgroup-menu-2 {
@@ -369,10 +380,10 @@ input[type=submit]:hover {
 .description-menu-2 {
   float: left; 
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   color: #555;
-  margin-top: 30%  
+  margin-top: 50%  
 }
 .title-menu-2 {
   text-align: right;
@@ -393,10 +404,10 @@ input[type=submit]:hover {
 .description-menu-3 {
   float: left; 
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   color: #555;
-  margin-top: 30%  
+  margin-top: 40%  
 }
 
 .hgroup-outlet {
@@ -473,3 +484,30 @@ input[type=submit]:hover {
   font-weight: 600;
   margin-bottom: 50px
 }
+
+.map {
+	width: 490px; 
+	height: 350px;
+	margin-top: 65%;
+	margin-left: 10%;
+	box-shadow:inset 0px 0px 10px 0px rgba(0, 0, 0, 0.25) 	
+}
+
+.map:before {
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.map-container:before, .map-container:after, .map:before, .map:after {
+    position: absolute;
+    display: block;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    content: '';
+    z-index: 5;
+}
+
+.img-ps {
+	width: 120px;
+	height: 35px;

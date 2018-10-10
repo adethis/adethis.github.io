@@ -87,12 +87,13 @@
 	}
 	.menu-unggl-custom { 
 		display: flex;
-	    width: 100%;
-	    float: none;
-	    position: relative;
-	    margin-left: -70px;
-	    height: auto;
-	    top: 20px
+		width: 160%;
+		float: none;
+		position: relative;
+		margin-left: 0;
+		height: auto;
+		top: 0px;
+		left: -130px;
 	}
 	.thumbnail-left p, 
 	.thumbnail-center p, 
@@ -103,8 +104,18 @@
 	}
 	.thumbnail-left,
 	.thumbnail-center,
-	.thumbnail-right { height: 105px }
+	.thumbnail-right { 
+		height: 120px;
+		width: 120px;
+	}
 
+	.thumbnail-left img, 
+	.thumbnail-center img, 
+	.thumbnail-right img {
+		width: auto;
+		height: 90px;
+	}
+	
 	.slogan {
 	    background: linear-gradient(to right, #30d07f 0%, #675b08 100%);
 	    -webkit-background-clip: text;
@@ -187,6 +198,21 @@
 	  padding-left: 30px;
 	  width: 100%
 	}
+	.hgroup-contact.map-area {
+		height: 200px;
+		margin-top: 0;
+		margin-bottom: 200px;
+	}
+	.map {
+		width: auto;
+		height: 350px;
+		margin-top: 65%;
+		margin-left: 0;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px inset;
+		position: relative;
+		overflow: hidden;
+		padding: 0px;
+	}
 	.hgroup-menu-1,
 	.hgroup-menu-3 {
 	    float: none;
@@ -198,7 +224,9 @@
 		width: 340px;
 	    height: 210px;
 	    margin-left: 20px;
+		margin-bottom: 70px;
 	}
+	.thumbnail-menu-unggul-left.single { height: 280px }
 	.description-menu-1,
 	.description-menu-3 {
 	    float: none;
@@ -251,9 +279,10 @@
 	}
 	#introContact {
 		float: none;
-		height: 750px;
+		height: auto;
 		width: 90%
 	}
+	
 	.hgroup-contact {
 	    float: none;
 	    width: 95%;
@@ -272,6 +301,19 @@
 	    text-align: left;
 	    padding-left: 20px;
 	}
+
+	.map {
+		width: auto;
+		height: 350px;
+		margin-top: 0%;
+		margin-bottom: 20px;
+		margin-left: 0%;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px inset;
+		position: relative;
+		overflow: hidden;
+	}
+}
+	
 }
 
 /* */
@@ -355,6 +397,18 @@
 		height: 150px;
 		width: 170px
 	}
+
+	.menu-unggl-custom {
+		display: flex;
+		width: 165%;
+		float: none;
+		position: relative;
+		margin-left: 0;
+		height: auto;
+		top: 0px;
+		left: -120px;
+	}	
+	
 	.menu-unggul-2 {
 	    display: inline-flex;
 	    position: relative;
@@ -384,5 +438,11 @@
 	    color: #fff;
 	    font-size: 10px;
 	}
-
+	.img-sample-menu-profile {
+		width: 250px;
+		position: absolute;
+		float: none;
+		height: auto;
+	}
+	
 }
