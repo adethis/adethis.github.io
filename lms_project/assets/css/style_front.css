@@ -34,7 +34,8 @@ a:hover {
 	box-shadow: 0 8px 20px rgba(0,0,0,0.03);
 	transition: all .5s ease;
 }
-.skin-black .main-header .no-shadow { 
+.skin-black .main-header .no-shadow {
+	background-color: #fff !important; 
 	box-shadow: none; 
 	transition: all .5s ease;
 }
@@ -546,7 +547,3 @@ img.img__latest_training {
 		width: 100%;
 	}
 	.box__list_training .info-box-content { margin-left: 0; }
-
-.skin-black .main-header .navbar {
-	 background-color:#fff
-}
