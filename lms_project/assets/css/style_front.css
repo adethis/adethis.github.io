@@ -30,6 +30,7 @@ a:hover {
 	transition: all .5s ease;
 }
 .navbar-fixed-bottom, .navbar-fixed-top {
+	background-color: #fff !important;
 	-webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.03);
 	box-shadow: 0 8px 20px rgba(0,0,0,0.03);
 	transition: all .5s ease;
