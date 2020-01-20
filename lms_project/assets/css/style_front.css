@@ -546,3 +546,7 @@ img.img__latest_training {
 		width: 100%;
 	}
 	.box__list_training .info-box-content { margin-left: 0; }
+
+.skin-black .main-header .navbar {
+	 background-color:#fff
+}
