@@ -1,0 +1,100 @@
+.bg-rst7 {
+    background-color: #001D4A;
+}
+.bg-rst7-secondary {
+    background-color: #EFA93C;
+}
+.bg-rst7-red {
+    background-color: #DD0C5E;
+}
+.bg-rst7-green {
+    background-color: #05B73E;
+}
+.topbar .bi { color: #EFA93C; }
+.topbar {
+    color: white;
+    font-size: 14px;
+}
+.slider-section .carousel-caption {
+    top: 30%;
+    text-align: left;
+    width: 45%;
+}
+.slider-section .carousel-caption h1 {
+    font-size: 5rem;
+    font-weight: 800;
+}
+.section-box {
+    margin-top: -50px;
+}
+.section-box p.card-text {
+    font-size: 12px;
+}
+.box-circle {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 20px auto;
+}
+.r-1 {
+    border-radius: 10px;
+}
+hr.rst7 {
+    border: 0;
+    height: 5px;
+    background-color: #EFA93C;
+    width: 66px;
+    margin-left: 0px;
+}
+.section-sponsor .carousel-indicators {
+    bottom: -50%;
+}
+.section-sponsor .carousel-indicators li {
+    background-color: #3a3a3a;
+    border-radius: 50%;
+    margin: 10px;
+    height: 10px;
+    width: 10px;
+}
+.img-sponsor { object-fit: cover; }
+footer h5 { 
+    color: #EFA93C; 
+    margin-bottom: 30px;
+}
+.text-rst7-secondary {
+    color: #EFA93C;
+}
+.text-rst7-green {
+    color: #05B73E;
+}
+.circle-social {
+    background-color: #EFA93C;
+    display: inline-block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    padding: 5px;
+    padding-left: 9px;
+}
+
+@media screen and (max-width: 420px) {
+    .slider-section .carousel-caption {
+        top: 5%;
+        text-align: center;
+        width: 70%;
+    }
+    .slider-section .carousel-caption h1 { font-size: 21px; }
+    .slider-section .carousel-caption p { font-size: 12px; }
+    .slider-section .carousel-caption button { font-size: 12px; }
+    .section-sponsor .carousel-indicators { bottom: -10%; }
+    p.notice {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 280px;
+        white-space: nowrap;
+    }
+}
