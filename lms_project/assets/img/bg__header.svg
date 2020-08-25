@@ -1,0 +1,39 @@
+<svg width="1022" height="526" viewBox="0 0 1022 526" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1022" height="526" rx="30" fill="url(#paint0_linear)"/>
+<circle cx="31" cy="31" r="3" fill="#D98C74"/>
+<circle cx="51" cy="31" r="3" fill="#D98C74"/>
+<circle cx="71" cy="31" r="3" fill="#D98C74"/>
+<circle cx="91" cy="31" r="3" fill="#D98C74"/>
+<circle cx="111" cy="31" r="3" fill="#D98C74"/>
+<circle cx="31" cy="51" r="3" fill="#D98C74"/>
+<circle cx="51" cy="51" r="3" fill="#D98C74"/>
+<circle cx="71" cy="51" r="3" fill="#D98C74"/>
+<circle cx="91" cy="51" r="3" fill="#D98C74"/>
+<circle cx="111" cy="51" r="3" fill="#D98C74"/>
+<circle cx="31" cy="71" r="3" fill="#D98C74"/>
+<circle cx="51" cy="71" r="3" fill="#D98C74"/>
+<circle cx="71" cy="71" r="3" fill="#D98C74"/>
+<circle cx="91" cy="71" r="3" fill="#D98C74"/>
+<circle cx="111" cy="71" r="3" fill="#D98C74"/>
+<circle cx="31" cy="91" r="3" fill="#D98C74"/>
+<circle cx="51" cy="91" r="3" fill="#D98C74"/>
+<circle cx="71" cy="91" r="3" fill="#D98C74"/>
+<circle cx="91" cy="91" r="3" fill="#D98C74"/>
+<circle cx="111" cy="91" r="3" fill="#D98C74"/>
+<circle cx="31" cy="111" r="3" fill="#D98C74"/>
+<circle cx="51" cy="111" r="3" fill="#D98C74"/>
+<circle cx="71" cy="111" r="3" fill="#D98C74"/>
+<circle cx="91" cy="111" r="3" fill="#D98C74"/>
+<circle cx="111" cy="111" r="3" fill="#D98C74"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M802 526C802 404.497 900.497 306 1022 306V526H802Z" fill="url(#paint1_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="1124.5" y1="569.613" x2="-389.793" y2="132.338" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D98C74" stop-opacity="0.15"/>
+<stop offset="1" stop-color="#D98C74" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="653.5" y1="151" x2="1022" y2="526" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D98C74" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#D98C74" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
